@@ -13,8 +13,10 @@ public class LoginServlet extends HttpServlet{
 		// TODO Auto-generated method stub
 //		super.doGet(req, resp);
 		System.out.println("login servlet");
-//		request.getRequestDispatcher("/WEB-INF/view/Login.jsp").forward(request, response);
-		request.getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);
+		String FirstName=request.getAttribute(FirstName);
+		System.out.println(FirstName);
+		request.getRequestDispatcher("/WEB-INF/view/Login.jsp").forward(request, response);
+//		request.getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);
 		System.out.println("DIspatcher complete");
 		
 	}
