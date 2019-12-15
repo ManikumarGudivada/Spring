@@ -53,7 +53,7 @@
 		
 		
 		<c:forEach items="${name}" var="d"> 
-			<c:out value="${d}.[0]"><br></c:out>
+			<c:out value="${d}"><br></c:out>
 		</c:forEach>
 	</form>
 </body>
