@@ -35,10 +35,15 @@
 				
 				</tr>
 			</thead>
+			<tbody>
+			<tr>
+				
+			</tr>
+			</tbody>
 		</table>
-		<c:forEach items="name" var="d"> 
-			<h1>${d}</h1>
-		</c:forEach>
+		<%-- <c:forEach items="name" var="d"> 
+			<h1>${firstname}</h1>
+		</c:forEach> --%>
 	</div>
 	
 	
@@ -47,8 +52,8 @@
 <form action="/Login.do" method="get">
 		
 		
-		<c:forEach items="name" var="d"> 
-			<h1>${d}</h1>
+		<c:forEach items="${name}" var="d"> 
+			<c:out value="${d}.[0]"><br></c:out>
 		</c:forEach>
 	</form>
 </body>

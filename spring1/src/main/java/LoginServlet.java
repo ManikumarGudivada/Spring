@@ -36,6 +36,7 @@ public class LoginServlet extends HttpServlet{
 		dtLogin.setFirstName(request.getParameter("FirstName"));
 		dtLogin.setLastName(request.getParameter("LastName"));
 		svcLogin.addToList(dtLogin);
+		request.getSession().setAttribute("firstname", dtLogin.getFirstName());
 		request.getSession().setAttribute("name", svcLogin.retriveData());
 		//request.getRequestDispatcher("/WEB-INF/view/Login.jsp").forward(request, response);
 		response.sendRedirect("/Login.do");
