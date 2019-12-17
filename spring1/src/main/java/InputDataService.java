@@ -12,6 +12,7 @@ public class InputDataService {
 	 */
 
 	public void addToList(InputData data) {
+		
 		lstinput.add(data);
 		
 	}

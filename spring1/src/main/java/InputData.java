@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class InputData {
 	String FirstName;
@@ -5,10 +6,15 @@ public class InputData {
 	String Company;
 	String Place;
 	
-	  @Override public String toString() { return "<tb> " +
-	  FirstName + "</tb><tb>" + LastName + "</tb><tb>" + Company + "</tb><tb>" +
-	  Place + "</tb> &nbsp"; }
+	
+	  @Override public String toString() { 
+		 String temp=FirstName+","+ LastName+","+ Company+","+ Place ;
+		  return  temp; 
+		  }
 	 
+
+	
+	
 	public String getFirstName() {
 		return FirstName;
 	}

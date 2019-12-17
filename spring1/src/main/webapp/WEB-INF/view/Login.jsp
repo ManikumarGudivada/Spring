@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -51,7 +52,7 @@
 </form>
 <form action="/Login.do" method="get">
 		
-	<table>
+	<table border="1">
 		<thead>
 			<tr>
 				<th>Si.No</th>
@@ -61,17 +62,18 @@
 				<th>Place</th>
 			</tr>
 		</thead>
-	</table>
-	<table>
+	
 		<tbody>
-			<tr>
+			
 				<c:forEach items="${name}" var="d">
-				<%-- <c:forEach items="${d}" var="x"> --%>
-					<td><c:out value="${d}&nbsp" ></c:out></td> 
-				<%-- </c:forEach>  --%>
-				<%-- <c:out value="${d}"><br></c:out> --%>
+				<tr>
+				<c:forEach items="${fn:split(d,',')}" var="x">
+					<td><c:out value="${x}" ></c:out></td> 
+				</c:forEach> 
+				</tr>
+				<%-- <c:out value="${fn:split(d,',')[0]}"><br></c:out> --%>
 			</c:forEach>
-			</tr>
+			
 		</tbody>
 	</table>	
 		
