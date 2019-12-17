@@ -51,10 +51,30 @@
 </form>
 <form action="/Login.do" method="get">
 		
+	<table>
+		<thead>
+			<tr>
+				<th>Si.No</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Company</th>
+				<th>Place</th>
+			</tr>
+		</thead>
+	</table>
+	<table>
+		<tbody>
+			<tr>
+				<c:forEach items="${name}" var="d">
+				<%-- <c:forEach items="${d}" var="x"> --%>
+					<td><c:out value="${d}&nbsp" ></c:out></td> 
+				<%-- </c:forEach>  --%>
+				<%-- <c:out value="${d}"><br></c:out> --%>
+			</c:forEach>
+			</tr>
+		</tbody>
+	</table>	
 		
-		<c:forEach items="${name}" var="d"> 
-			<c:out value="${d}"><br></c:out>
-		</c:forEach>
-	</form>
+</form>
 </body>
 </html>

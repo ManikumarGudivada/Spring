@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns="/Login.do")
 public class LoginServlet extends HttpServlet{
-	InputData dtLogin=new InputData();
+	
 	InputDataService svcLogin=new InputDataService();
 	
 	@Override
@@ -20,7 +20,7 @@ public class LoginServlet extends HttpServlet{
 		
 		System.out.println("START GET SERVICE");
 //		if (request.getParameter("LastName")!=null){
-		request.setAttribute("name", svcLogin.retriveData());
+		request.getSession().setAttribute("name", svcLogin.retriveData());
 //		}
 ////		svcLogin.FirstName=request.getAttribute("FirstName");
 //		System.out.println(svcLogin.FirstName);
@@ -33,6 +33,7 @@ public class LoginServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 	        throws ServletException, IOException{
 		System.out.println("START POST SERVICE");
+		InputData dtLogin=new InputData();
 		dtLogin.setFirstName(request.getParameter("FirstName"));
 		dtLogin.setLastName(request.getParameter("LastName"));
 		svcLogin.addToList(dtLogin);

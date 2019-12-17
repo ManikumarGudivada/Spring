@@ -6,10 +6,10 @@ public class InputDataService {
 	
 	
 
-	@Override
-	public String toString() {
-		return "InputDataService [retriveData()=" + retriveData() + "]";
-	}
+	/*
+	 * @Override public String toString() { return
+	 * "InputDataService [retriveData()=" + retriveData() + "]"; }
+	 */
 
 	public void addToList(InputData data) {
 		lstinput.add(data);

@@ -3,11 +3,12 @@ public class InputData {
 	String FirstName;
 	String LastName;
 	String Company;
-	@Override
-	public String toString() {
-		return "LoginService [FirstName=" + FirstName + ", LastName=" + LastName + ", Company=" + Company + ", Place="
-				+ Place + "]";
-	}
+	String Place;
+	
+	  @Override public String toString() { return "<tb> " +
+	  FirstName + "</tb><tb>" + LastName + "</tb><tb>" + Company + "</tb><tb>" +
+	  Place + "</tb> &nbsp"; }
+	 
 	public String getFirstName() {
 		return FirstName;
 	}
@@ -32,5 +33,5 @@ public class InputData {
 	public void setPlace(String place) {
 		Place = place;
 	}
-	String Place;
+	
 }
