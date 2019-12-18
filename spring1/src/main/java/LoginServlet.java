@@ -33,6 +33,7 @@ public class LoginServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 	        throws ServletException, IOException{
 		System.out.println("START POST SERVICE");
+		
 		InputData dtLogin=new InputData();
 		dtLogin.setFirstName(request.getParameter("FirstName"));
 		dtLogin.setLastName(request.getParameter("LastName"));

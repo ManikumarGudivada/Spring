@@ -12,7 +12,8 @@ public class InputDataService {
 	 */
 
 	public void addToList(InputData data) {
-		
+		InputData serial=new InputData(lstinput.size());
+//		serial.setSlNo(serial.getSlNo()+1);
 		lstinput.add(data);
 		
 	}
