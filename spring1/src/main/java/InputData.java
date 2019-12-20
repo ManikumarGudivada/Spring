@@ -1,20 +1,23 @@
 import java.util.ArrayList;
 
 public class InputData {
-	int SlNo;
+	private int SlNo;
 	static int temp=0;
 	String FirstName;
 	String LastName;
 	String Company;
 	String Place;
 	
-	public InputData(int i) {
-		temp=temp+1;
-		this.SlNo=temp+i;
-	}
-	public InputData() {
-		// TODO Auto-generated constructor stub
-	}
+	
+	  public InputData(int i) { 
+		  temp=temp+1; this.SlNo=temp+i; 
+		  }
+	 
+	
+	  public InputData() { // TODO Auto-generated constructor stub super();
+	  this.SlNo=temp+1; 
+	  }
+	 
 	public int getSlNo() {
 		return SlNo;
 	}
